@@ -9,24 +9,25 @@
     <script src="js/angular-1.2.13/angular.min.js"></script> 
     <script src="js/tictactoe_game.js"></script>
   </head>
+  
   <body ng-controller="gameCtrl">
 
      <div id="game">
       
        <ul id="teams">
-        <li>
+        <li class>
           <img src="/img/bert.jpg">
           <h2>Team <span class="team"></span></h2>
           <h3 class="player"></h3>
         </li>
-        <li>
+        <li class>
           <img src="/img/ernie.jpg">
           <h2>Team <span class="team"></span></h2>
           <h3 class="player"></h3>
         </li>
       </ul>
       <div id="board">
-        <div ng-repeat="id in tileIds" id="tile{{id}}" class="tile">
+        <div ng-repeat="id in tileIds" id="tile{{id}}" class="tile" ng-click="selected($index)">
         </div>
       </div>
       <div id="results">
@@ -39,6 +40,7 @@
 
   <!-- <script src="js/tictactoe.js"></script> -->
   </body>
+
 </html>
 
 

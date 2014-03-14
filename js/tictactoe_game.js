@@ -5,6 +5,23 @@ ticTacToe = angular.module("ticTacToeApp", []);
 
 ticTacToe.controller("gameCtrl", [
   "$scope", function($scope) {
-    return $scope.tileIds = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+    $scope.currentPlayer = [];
+    $scope.tileIds = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+    $scope.players = [
+      {
+        name: 'Ernie',
+        marker: 'X',
+        img_url: 'img/ernie.jpg',
+        indicator: 0
+      }, {
+        name: 'Bert',
+        marker: 'O',
+        img_url: 'img/bert.jpg',
+        indicator: 0
+      }
+    ];
+    $scope.selected = function(index) {
+      return console.log(index);
+    };
   }
 ]);
