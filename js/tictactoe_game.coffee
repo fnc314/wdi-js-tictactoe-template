@@ -26,8 +26,7 @@ ticTacToe.controller("gameCtrl", ["$scope"
       [1,4,7],
       [2,5,8],
       [0,4,8],
-      [2,4,6]
-      ]
+      [2,4,6]]
     
     $scope.players = [
       {
@@ -50,8 +49,8 @@ ticTacToe.controller("gameCtrl", ["$scope"
       value for value in array1 when value in array2
 
     $scope.isWinner = (array) ->
-      array = array.sort()
-      if $scope.intersection(array, $scope.winCombos)
+      console.log($scope.intersection(array, $scope.winCombos))
+      if $scope.intersection(array, $scope.winCombos).length == array.length
         console.log("true")
       else
         console.log("false")
@@ -66,8 +65,7 @@ ticTacToe.controller("gameCtrl", ["$scope"
             tile.letter = player.marker
             player.moves.push(index)
             player.moves = player.moves.sort()
-            console.log(player.moves)
-            # $scope.isWinner([player.moves])
+            $scope.isWinner(player.moves)
             $scope.turn++
             $scope.turn = $scope.turn % 2
       return

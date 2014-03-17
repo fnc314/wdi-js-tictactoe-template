@@ -77,8 +77,8 @@ ticTacToe.controller("gameCtrl", [
       return _results;
     };
     $scope.isWinner = function(array) {
-      array = array.sort();
-      if ($scope.intersection(array, $scope.winCombos)) {
+      console.log($scope.intersection(array, $scope.winCombos));
+      if ($scope.intersection(array, $scope.winCombos).length === array.length) {
         return console.log("true");
       } else {
         return console.log("false");
@@ -99,7 +99,7 @@ ticTacToe.controller("gameCtrl", [
             tile.letter = player.marker;
             player.moves.push(index);
             player.moves = player.moves.sort();
-            console.log(player.moves);
+            $scope.isWinner(player.moves);
             $scope.turn++;
             $scope.turn = $scope.turn % 2;
           }
