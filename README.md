@@ -1,3 +1,5 @@
+Description:
+==
 A JavaScript based Tic-Tac-Toe game between two users.  The lab is an exercise at using CoffeeScript, manipulating the DOM, and using JavaScript (particularly Angular.js) to create an interactive, single-page app.  At the moment, the players are Bert and Ernie, but the code is easily customizeable.
 
 The following is the assignment description:
